@@ -144,8 +144,9 @@
         let duration = 1200;
         let interval;
         let isRunning = false;
-        let catLevel = parseInt(sessionStorage.getItem("catLevel")) || 1;
-        let catSize = parseInt(sessionStorage.getItem("catSize")) || 50;
+        let catLevel = sessionStorage.getItem("catLevel") ? parseInt(sessionStorage.getItem("catLevel"), 10) : 1;
+        let catSize = sessionStorage.getItem("catSize") ? parseInt(sessionStorage.getItem("catSize"), 10) : 50;
+
         
         const cat = document.getElementById("cat");
         const timerDisplay = document.getElementById("timer");
