@@ -144,8 +144,8 @@
         let duration = 1200;
         let interval;
         let isRunning = false;
-        let catLevel = sessionStorage.getItem("catLevel") ? parseInt(sessionStorage.getItem("catLevel"), 10) : 1;
-        let catSize = sessionStorage.getItem("catSize") ? parseInt(sessionStorage.getItem("catSize"), 10) : 50;
+        let catLevel = localStorage.getItem("catLevel") ? parseInt(localStorage.getItem("catLevel"), 10) : 1;
+        let catSize = localStorage.getItem("catSize") ? parseInt(localStorage.getItem("catSize"), 10) : 50;
 
         
         const cat = document.getElementById("cat");
@@ -188,8 +188,8 @@
                         catLevel++;
                         cat.style.width = `${catSize}px`;
                         levelDisplay.textContent = catLevel;
-                        sessionStorage.setItem("catSize", catSize);
-                        sessionStorage.setItem("catLevel", catLevel);
+                        localStorage.setItem("catSize", catSize);
+                        localStorage.setItem("catLevel", catLevel);
                     }
                 }, 1000);
             } else {
