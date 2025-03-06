@@ -127,6 +127,7 @@
         <div class="settimer">
             <label for="timeSelect">Set Timer:</label>
             <select id="timeSelect">
+                <option value="300">5 Minutes</option>
                 <option value="1200">20 Minutes</option>
                 <option value="1800">30 Minutes</option>
                 <option value="2700">45 Minutes</option>
@@ -187,7 +188,7 @@
                         catSize += 10;
                         catLevel++;
                         cat.style.width = `${catSize}px`;
-                        levelDisplay.textContent = catLevel;
+                        levelDisplay.textContent = `Levels ${catLevel}`;
                         localStorage.setItem("catSize", catSize);
                         localStorage.setItem("catLevel", catLevel);
                     }
